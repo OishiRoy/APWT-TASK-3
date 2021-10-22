@@ -14,7 +14,7 @@
 @extends('../layouts.app')
 @section('content')
 <div class="row" >
-    <div class="col-3" style="background: darkblue">
+    <div class="col-3" style="background: gray">
         @include('pages.adminSideBar')
     </div>
     <div class="col-9">
@@ -53,13 +53,13 @@
                         <td class="px-4">{{$user->address}}</td>
                         <td class="px-4">{{$user->phone}}</td>
                         <td class="px-4">
-                            <a class="btn btn-primary btn-sm mx-1" href={{ "editUser/".$user->id }}>Update</a>
-                            <a class="btn btn-danger btn-sm" href={{ "deleteUser/".$user->id }}>Delete</a>
+                            <a class="btn btn-success btn-sm mx-1" href={{ "editUser/".$user->id }}>Update</a>
+                            <a class="btn btn-success btn-sm" href={{ "deleteUser/".$user->id }}>Delete</a>
                         </td>
                     </tr>
                     @endforeach
                 </table>
-                <a class="btn btn-primary btn-sm mb-3" href="{{route('addUser')}}">Add User</a>
+                <a class="btn btn-danger btn-sm mb-3" href="{{route('addUser')}}">Add User</a>
             </div>
         </div>
     </div>
